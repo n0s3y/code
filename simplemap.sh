@@ -1,10 +1,10 @@
 #!/bin/bash
 read -sp "Voer IP adres in : " ip
 
-echo -e "\nYour input is $ip"
+echo -e "\nJe hebt $ip ingevoert en wordt gescant mits het IP bereikbaar is"
     # check if ip is online
     if ping -c 1 "$ip" | grep "from" >/dev/null; then
-    	echo "-------------------"$ip" is online... Starting nmap scan-----------------"
+    	echo "-------------------"$ip" is online... Start simplemap scan-----------------"
         sudo nmap -sC -sV -Pn -O -v --script vuln $ip -oX output.xml
     else
     	sleep 1
