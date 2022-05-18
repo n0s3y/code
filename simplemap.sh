@@ -1,8 +1,4 @@
 #!/bin/bash
-RED='\033[0;33m'
-YELLOW='\033[0;38m'
-GREEN='\033[0;30m'
-NC='\033[0m'
 read -sp "Voer IP adres in : " ip
 
 echo -e "\nYour input is $ip"
