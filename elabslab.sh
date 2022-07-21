@@ -7,11 +7,21 @@ echo "."
 echo "."
 echo "."
 printf -- '\n';
+echo "."
+echo "."
+echo "."
 echo "Reminder; elke keer als je dit script start zorg ik ervoor dat jouw kali sources.list juist is, wanneer dit faalt sluit het script zichzelf af omdat anders firmAE niet juist installeert."
 echo "deb http://http.kali.org/kali kali-last-snapshot main contrib non-free" | sudo tee /etc/apt/sources.list && sudo apt update || exit
 printf -- '\n';
+echo "."
+echo "."
+echo "."
 echo "Wat wil je doen? 1. Installeer FirmAE, 2 Fix FirmAE"
+echo "."
+echo "."
+echo "."
 printf -- 'lets go... \n';
+
 sleep 3
 read input
 if [[ $input == "1" || $input == "install" ]]; 
@@ -41,8 +51,9 @@ sleep 1
 printf -- '\n';
 
 echo "============ Als je voor optie 1 hebt gekozen; start mij opnieuw op en kies voor optie 2. Als je deze beiden hebt gedaan; hier scheiden onze wegen, goodbye! ==============="
+echo "."
+echo "."
 printf -- '\n';
-sleep 1
-
+sleep 2
 printf -- '\n';
 exit 0;
