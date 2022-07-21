@@ -36,7 +36,7 @@ elif [[ $input == "2" || $input == "fix" ]];
 then
 	printf -- '\033[33m WARNING: dit is best wel gevaarlijk, onderbreek de fix dus niet. \033[0m\n';
 	cd ~/FirmAE
-	sed -i '445,+2 s/"-e", "-r", "-C",/"--run-as=root", "-e", "-r", "C",/gi' ~/FirmAE/sources/extractor/extractor.py
+	sed -i '445,+2 s/"-e", "-r", "-C",/"--run-as=root", "-e", "-r", "-C",/gi' ~/FirmAE/sources/extractor/extractor.py
 	cd ~/FirmAE && pwd && wget https://github.com/ReFirmLabs/binwalk/archive/refs/tags/v2.3.1.tar.gz && tar -xf v2.3.1.tar.gz && cd binwalk-2.3.1 
 	sed -i '46,+1 s/qt5base-dev/qtbase5-dev/g' /home/kali/FirmAE/binwalk-2.3.1/deps.sh
 	sed -i '86,+5 s/(cd/#(cd/gi' /home/kali/FirmAE/binwalk-2.3.1/deps.sh
@@ -45,7 +45,6 @@ then
 	wget https://raw.githubusercontent.com/n0s3y/KaliLinux_fixes/main/extractor.py && cp extractor.py ~/FirmAE/sources/extractor/
 	echo "echo PATH=/home/kali/.local/bin:$PATH" > ~/.zshrc
 	source ~/.zshrc
-	sudo rm -rf /FirmAE/scratch
 fi
 sleep 1
 printf -- '\n';
