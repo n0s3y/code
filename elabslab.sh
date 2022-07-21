@@ -49,8 +49,7 @@ then
 fi
 sleep 1
 printf -- '\n';
-
-echo "============ Als je voor optie 1 hebt gekozen; start mij opnieuw op en kies voor optie 2. Als je deze beiden hebt gedaan; hier scheiden onze wegen, goodbye! ==============="
+printf -- '\033[33m WARNING: Als je voor optie 1 hebt gekozen; start mij opnieuw op en kies voor optie 2. Als je deze beiden hebt gedaan; hier scheiden onze wegen, goodbye! \033[0m\n';
 echo "."
 echo "."
 printf -- '\n';
