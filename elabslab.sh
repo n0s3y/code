@@ -3,13 +3,16 @@
 echo " ============ Eat like a Bear, sting like a Bee ============"
 sleep 2
 echo "Als FirmAE nog niet geinstalleert is, kies dan voor optie 1. Als het geinstalleert is, start mij opnieuw en voer optie 2 uit om alles werkend te krijgen."
-sleep 3
-echo "Reminder; elke keer als je dit script start zorg ik ervoor dat jouw kali sources.list juist is."
-echo "deb http://http.kali.org/kali kali-last-snapshot main contrib non-free" | sudo tee /etc/apt/sources.list && sudo apt update
+echo "."
+echo "."
+echo "."
+printf -- '\n';
+echo "Reminder; elke keer als je dit script start zorg ik ervoor dat jouw kali sources.list juist is, wanneer dit faalt sluit het script zichzelf af omdat anders firmAE niet juist installeert."
+echo "deb http://http.kali.org/kali kali-last-snapshot main contrib non-free" | sudo tee /etc/apt/sources.list && sudo apt update || exit
+printf -- '\n';
 echo "Wat wil je doen? 1. Installeer FirmAE, 2 Fix FirmAE"
 printf -- 'lets go... \n';
 sleep 3
-
 read input
 if [[ $input == "1" || $input == "install" ]]; 
 then
@@ -35,9 +38,10 @@ then
 	sudo rm -rf /FirmAE/scratch
 fi
 sleep 1
+printf -- '\n';
 
 echo "============ Als je voor optie 1 hebt gekozen; start mij opnieuw op en kies voor optie 2. Als je deze beiden hebt gedaan; hier scheiden onze wegen, goodbye! ==============="
-
+printf -- '\n';
 sleep 1
 
 printf -- '\n';
